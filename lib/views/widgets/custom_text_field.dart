@@ -3,27 +3,20 @@ import 'package:notes_app/constants.dart';
 
 // ignore: must_be_immutable
 class CustomTextField extends StatelessWidget {
-  CustomTextField({
+  const CustomTextField({
     super.key,
-    this.hintText,
-    this.onChanged,
-    this.obscureText = false,
-    this.inputType
+    required this.hintText,
+     this.maxLines=1,
   });
-  String? hintText;
-  bool? obscureText;
-  TextInputType? inputType;
-  Function(String)? onChanged;
+  final String hintText;
+  final int maxLines;
   @override
   Widget build(BuildContext context) {
     return TextField(
       cursorColor: kPrimaryColor,
-      obscureText: obscureText!,
-      keyboardType: inputType,
-     
-      onChanged: onChanged,
+maxLines: maxLines,
       decoration: InputDecoration(
-        hintStyle: TextStyle(color:kPrimaryColor),
+        hintStyle: TextStyle(color: kPrimaryColor),
         hintText: hintText,
         border: buildBorder(),
         focusedBorder: buildBorder(kPrimaryColor),
@@ -35,8 +28,8 @@ class CustomTextField extends StatelessWidget {
   // ignore: strict_top_level_inference
   OutlineInputBorder buildBorder([color]) {
     return OutlineInputBorder(
-        borderSide:  BorderSide(color:color ?? Colors.white),
-        borderRadius: BorderRadius.circular(8),
-      );
+      borderSide: BorderSide(color: color ?? Colors.white),
+      borderRadius: BorderRadius.circular(8),
+    );
   }
 }
