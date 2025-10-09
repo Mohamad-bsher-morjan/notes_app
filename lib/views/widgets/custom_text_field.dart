@@ -6,7 +6,8 @@ class CustomTextField extends StatelessWidget {
   const CustomTextField({
     super.key,
     required this.hintText,
-     this.maxLines=1, this.onSaved,
+    this.maxLines = 1,
+    this.onSaved,
   });
   final String hintText;
   final int maxLines;
@@ -16,11 +17,14 @@ class CustomTextField extends StatelessWidget {
     return TextFormField(
       onSaved: onSaved,
       validator: (value) {
-        if(value?.isEmpty ?? true){return 'Field is requird';}
-        else {return null;}
+        if (value?.isEmpty ?? true) {
+          return 'Field is requird';
+        } else {
+          return null;
+        }
       },
       cursorColor: kPrimaryColor,
-maxLines: maxLines,
+      maxLines: maxLines,
       decoration: InputDecoration(
         hintStyle: TextStyle(color: kPrimaryColor),
         hintText: hintText,
