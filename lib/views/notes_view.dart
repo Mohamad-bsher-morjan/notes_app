@@ -8,9 +8,11 @@ class NotesView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      
       floatingActionButton: FloatingActionButton(
         onPressed: () {
           showModalBottomSheet(
+            isScrollControlled: true,
             // shape: RoundedRectangleBorder(
             //   borderRadius: BorderRadiusGeometry.circular(16),
             // ),

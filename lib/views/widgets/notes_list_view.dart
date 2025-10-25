@@ -10,6 +10,7 @@ class NotesListView extends StatelessWidget {
       padding: const EdgeInsets.symmetric(vertical: 16),
       child: ListView.builder(
         padding: EdgeInsets.zero,
+        // padding: EdgeInsets.zero,  يُستخدم لتحديد أن الهامش الداخلي حول عنصر واجهة المستخدم هو صفر من جميع الجهات.
         itemBuilder: (context, index) {
           return const Padding(
             padding: EdgeInsets.symmetric(vertical: 4),
