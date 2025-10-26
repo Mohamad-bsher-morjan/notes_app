@@ -11,7 +11,7 @@ class NotesSuccess extends NotesState {
 
   final List <NoteModel> notes ;
 
-  NotesSuccess( this.notes); 
+  NotesSuccess(this.notes); 
 }
 
 class NotesFailuer extends NotesState {
